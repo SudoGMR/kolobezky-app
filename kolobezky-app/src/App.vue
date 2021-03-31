@@ -1,11 +1,38 @@
 <template>
   <IonApp>
     <IonSplitPane content-id="main-content">
+      <!--
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>Inbox</ion-list-header>
+            <ion-list-header>Hello John</ion-list-header>
             <ion-note>hi@ionicframework.com</ion-note>
+  
+            <ion-menu-toggle auto-hide="false" v-for="(p, i) in appPages" :key="i">
+              <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
+                <ion-icon slot="start" :ios="p.iosIcon" :md="p.mdIcon"></ion-icon>
+                <ion-label>{{ p.title }}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+  
+          <ion-list id="labels-list">
+            <ion-list-header>Labels</ion-list-header>
+  
+            <ion-item v-for="(label, index) in labels" lines="none" :key="index">
+              <ion-icon slot="start" :ios="bookmarkOutline" :md="bookmarkSharp"></ion-icon>
+              <ion-label>{{ label }}</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+      <ion-router-outlet id="main-content"></ion-router-outlet>
+      -->
+      <ion-menu content-id="main-content" type="overlay">
+        <ion-content>
+          <ion-list id="inbox-list">
+            <ion-list-header>Hello John</ion-list-header>
+            <ion-button>Profile</ion-button>
   
             <ion-menu-toggle auto-hide="false" v-for="(p, i) in appPages" :key="i">
               <ion-item @click="selectedIndex = i" router-direction="root" :router-link="p.url" lines="none" detail="false" class="hydrated" :class="{ selected: selectedIndex === i }">
@@ -31,7 +58,7 @@
 </template>
 
 <script lang="ts">
-import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonNote, IonRouterOutlet, IonSplitPane } from '@ionic/vue';
+import { IonApp, IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, /*IonNote,*/ IonRouterOutlet, IonSplitPane } from '@ionic/vue';
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
@@ -48,11 +75,12 @@ export default defineComponent({
     IonListHeader, 
     IonMenu, 
     IonMenuToggle, 
-    IonNote, 
+    /*IonNote,*/ 
     IonRouterOutlet, 
     IonSplitPane,
   },
   setup() {
+    /*
     const selectedIndex = ref(0);
     const appPages = [
       {
@@ -94,6 +122,7 @@ export default defineComponent({
     ];
     const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
     
+
     const path = window.location.pathname.split('folder/')[1];
     if (path !== undefined) {
       selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
@@ -105,6 +134,62 @@ export default defineComponent({
       selectedIndex,
       appPages, 
       labels,
+      archiveOutline, 
+      archiveSharp, 
+      bookmarkOutline, 
+      bookmarkSharp, 
+      heartOutline, 
+      heartSharp, 
+      mailOutline, 
+      mailSharp, 
+      paperPlaneOutline, 
+      paperPlaneSharp, 
+      trashOutline, 
+      trashSharp, 
+      warningOutline, 
+      warningSharp,
+      isSelected: (url: string) => url === route.path ? 'selected' : ''
+      */
+     const selectedIndex = ref(0);
+    const appPages = [
+      {
+        title: 'Find a scooter',
+        url: '/folder/FindScooter',
+        iosIcon: mailOutline,
+        mdIcon: mailSharp
+      },
+      {
+        title: 'Wallet',
+        url: '/folder/Wallet',
+        iosIcon: paperPlaneOutline,
+        mdIcon: paperPlaneSharp
+      },
+      {
+        title: 'Ride History',
+        url: '/folder/RideHistory',
+        iosIcon: heartOutline,
+        mdIcon: heartSharp
+      },
+      {
+        title: 'Help',
+        url: '/Register',
+        iosIcon: archiveOutline,
+        mdIcon: archiveSharp
+      }
+    ];//* Tlacidla zmenia link, ale nepresmeruju nan */
+    
+    
+    /*
+    const path = window.location.pathname.split('folder/')[1];
+    if (path !== undefined) {
+      selectedIndex.value = appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    }
+    */
+    const route = useRoute();
+    
+    return { 
+      selectedIndex,
+      appPages, 
       archiveOutline, 
       archiveSharp, 
       bookmarkOutline, 

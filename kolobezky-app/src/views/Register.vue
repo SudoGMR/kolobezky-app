@@ -2,44 +2,21 @@
     <ion-page>
         <ion-toolbar>
             <ion-buttons>
+                <!--
+                <ion-back-button>
+                    
+                </ion-back-button>
+                -->
                 <ion-button>
-                <ion-icon name="chevron-back-outline"></ion-icon>
-                    Spať    
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    Spať  
                 </ion-button>
             </ion-buttons>
         <ion-title>{{ $route.params.id }}</ion-title>
         </ion-toolbar>
 
-        <ion-content style="display: flex; flex-direction: row;">
-            <div>Register</div>
-            <div>Mas uz ucet?</div>
-            <div>
-                <ion-buttons>
-                    <ion-button>
-                        Prihlas sa
-                    </ion-button>
-                </ion-buttons>
-            </div>
-            <div>Osobne udaje</div>
-            <div>Meno</div>
-            <div>
-                <input type="text" name="user-name" id="user-name" placeholder="Meno">
-            </div>
-            <div>Telefon</div>
-            <div>
-                <input type="text" name="user-cont" id="user-cont">
-            </div>
-            <div>Heslo</div>
-            <div>
-                <input type="text" name="user-password" id="user-password">
-            </div>
-            <div>Terms</div>
-            <div>
-                <input type="checkbox" name="terms" id="terms">
-            </div>
-
-
-           <!-- <ion-grid>
+        <ion-content>
+           <ion-grid>
                 <ion-row>
                     <ion-col>
                         Register
@@ -66,10 +43,56 @@
                 </ion-row>
                 <ion-row>
                     <ion-col>
-                        <input type="text" name="Meno" id="user-name">
+                        Meno
                     </ion-col>
                 </ion-row>
-            </ion-grid>-->
+                <ion-row>
+                    <ion-col>
+                            <ion-input type="text" name="user-name" id="user-name"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        [space]
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Telefon
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="text" name="user-contact" id="user-contact"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Heslo
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="text" name="user-password" id="user-password"></ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-input type="checkbox" name="user-terms" id="user-user-terms"></ion-input>
+                        Terms
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        [space]
+                    </ion-col>
+                </ion-row>
+                <ion-buttons>
+                    <ion-button>
+                        Register
+                    </ion-button>
+                </ion-buttons>
+            </ion-grid>
         </ion-content>
     </ion-page>
 </template>
