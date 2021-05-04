@@ -2,7 +2,13 @@
 # -----------------------------------------------
 # Commands
 
-# run webiste
+# setup wetsite
+npm install
+
+# run website (npm) (recommended)
+npm run serve
+
+# run webiste (ionic)
 ionic serve
 
 # add native os
