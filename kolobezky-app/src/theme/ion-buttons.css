@@ -3,6 +3,9 @@ ion-buttons{
   flex-direction: column;
   padding-top: 15px;
 }
+ion-button{
+  --background: none;
+}
 .-btn{
     box-shadow: 2px 2px 4px 4px #f0f0f0;
     border-radius: 10px;
@@ -22,8 +25,8 @@ ion-buttons{
 }
 .-btn-tertiary{
   border: 1px solid var(--ion-color-tertiary-contrast);
-  background-color: var(--ion-color-tertiary);
-  color: #70f4b4;
+  background: none;
+  color: var(--ion-color-tertiary-contrast);
 }
 .-btn-normal{
   background-color: #ffffff;

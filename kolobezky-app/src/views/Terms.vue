@@ -1,9 +1,11 @@
 <template>
   <ion-page style="overflow: hidden">
-   <ion-header class="ion-no-border">
-     <ion-toolbar>
-       <ion-title>TERMS</ion-title>
-     </ion-toolbar>
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+          <ion-title>
+            <h1>Terms</h1>
+          </ion-title>
+      </ion-toolbar>
    </ion-header>
    <ion-content class="ion-no-border content">
      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi. Magna fringilla urna porttitor rhoncus dolor. Arcu ac tortor dignissim convallis. Volutpat sed cras ornare arcu dui vivamus arcu. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed. Nulla at volutpat diam ut venenatis tellus in metus. Penatibus et magnis dis parturient montes nascetur ridiculus. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Quis viverra nibh cras pulvinar mattis. Tempus egestas sed sed risus pretium quam vulputate dignissim. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Congue eu consequat ac felis donec et. Condimentum lacinia quis vel eros donec ac odio tempor. Iaculis eu non diam phasellus vestibulum lorem. Semper quis lectus nulla at volutpat diam ut venenatis. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Pellentesque nec nam aliquam sem et tortor consequat.
@@ -29,11 +31,11 @@ Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Pellentesqu
 </template>
 
 <script>
-import { IonContent, IonButton/*, IonFooter, IonTitle, IonToolbar*/ } from '@ionic/vue';
+import { IonContent, IonButton/*, IonFooter*/, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  components: { IonContent, IonButton/*, IonFooter, IonTitle, IonToolbar */}
+  components: { IonContent, IonButton/*, IonFooter*/, IonTitle, IonToolbar}
 });
 </script>
 
@@ -51,5 +53,14 @@ ion-grid{
 }
 h2{
   margin-bottom: 30px;
+}
+ion-toolbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ion-title{
+  align-items: center;
+  justify-content: center;  
 }
 </style>

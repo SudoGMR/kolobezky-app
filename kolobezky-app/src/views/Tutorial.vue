@@ -3,24 +3,26 @@
         <ion-content>
             <ion-grid>
                 <ion-row class="mid">
-                  <ion-col>
+                    <ion-col>
                       <ion-buttons>
-                          <ion-button class="-btn -btn-normal -dir-col">
-                              back
+                            <ion-button class="-btn-normal -dir-col">
+                                &lt;
                             </ion-button>
-                      </ion-buttons>
-                  </ion-col>
-                  <ion-col size="8">
-                      content
-                  </ion-col>
-                  <ion-col>
-                      <ion-buttons>
-                          <ion-button class="-btn -btn-normal -dir-col">
-                              next
-                            </ion-button>
-                      </ion-buttons>
-                  </ion-col>
-              </ion-row>
+                        </ion-buttons>
+                    </ion-col>
+                    <ion-col size="8" class="mid-tutorial">
+                        <h3>Tutorial</h3>
+                        <img src="../resources/scooter.png">
+                        <p>Praesent tempus accumsan sodales. Quisque quis vestibulum neque, nec aliquet ante. Ut varius finibus urna sit amet condimentum. Ut mattis libero sed ex faucibus, in. </p>
+                    </ion-col>
+                    <ion-col>
+                        <ion-buttons>
+                                <ion-button class="-btn-normal -dir-col">
+                                  &gt;
+                                </ion-button>
+                          </ion-buttons>
+                      </ion-col>
+                </ion-row>
             </ion-grid>
             <ion-footer>
                 <ion-buttons>
@@ -50,5 +52,16 @@ export default defineComponent({
 }
 ion-col ion-buttons{
     padding: 0;
+}
+ion-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 50%;
+}
+.mid-tutorial{
+    padding: 10px;
 }
 </style>
