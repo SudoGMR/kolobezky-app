@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "kolobezky-app",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
