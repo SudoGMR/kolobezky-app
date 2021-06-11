@@ -1,7 +1,0 @@
-{
-  "name": "kolobezky-app",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
-}
