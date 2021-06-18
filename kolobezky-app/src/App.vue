@@ -56,82 +56,45 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
-        title: 'Inbox',
-        url: '/folder/Inbox',
+        title: 'Tutorial',
+        url: '/tutorial/Inbox',
         iosIcon: mailOutline,
         mdIcon: mailSharp
       },
       {
-        title: 'Outbox',
-        url: '/folder/Outbox',
+        title: 'Start',
+        url: '/start/Outbox',
         iosIcon: paperPlaneOutline,
         mdIcon: paperPlaneSharp
       },
       {
-        title: 'Favorites',
-        url: '/folder/Favorites',
+        title: 'Register',
+        url: '/register/Favorites',
         iosIcon: heartOutline,
         mdIcon: heartSharp
       },
       {
-        title: 'Archived',
-        url: '/folder/Archived',
+        title: 'Login',
+        url: '/login/Archived',
         iosIcon: archiveOutline,
         mdIcon: archiveSharp
       },
       {
-        title: 'Trash',
-        url: '/folder/Trash',
+        title: 'Terms',
+        url: '/terms/Trash',
         iosIcon: trashOutline,
         mdIcon: trashSharp
       },
       {
-        title: 'Spam',
-        url: '/folder/Spam',
+        title: 'Forgot Password',
+        url: '/forgot-password/Spam',
         iosIcon: warningOutline,
         mdIcon: warningSharp
       },
       {
         title: 'Start',
         url: '/start'
-      },
-
-      {
-        title: 'Inbox',
-        url: '/start/Inbox',
-        iosIcon: mailOutline,
-        mdIcon: mailSharp
-      },
-      {
-        title: 'Outbox',
-        url: '/start/Outbox',
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp
-      },
-      {
-        title: 'Favorites',
-        url: '/start/Favorites',
-        iosIcon: heartOutline,
-        mdIcon: heartSharp
-      },
-      {
-        title: 'Archived',
-        url: '/start/Archived',
-        iosIcon: archiveOutline,
-        mdIcon: archiveSharp
-      },
-      {
-        title: 'Trash',
-        url: '/start/Trash',
-        iosIcon: trashOutline,
-        mdIcon: trashSharp
-      },
-      {
-        title: 'Spam',
-        url: '/start/Spam',
-        iosIcon: warningOutline,
-        mdIcon: warningSharp
-      },
+      }
     ];
     const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
     
