@@ -1,7 +1,7 @@
 <template>
   <IonApp>
     <IonSplitPane content-id="main-content">
-      <ion-menu content-id="main-content" type="overlay">
+      <ion-menu swipe-gesture="true" content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>Inbox</ion-list-header>
@@ -90,7 +90,48 @@ export default defineComponent({
         url: '/folder/Spam',
         iosIcon: warningOutline,
         mdIcon: warningSharp
-      }
+      },
+      {
+        title: 'Start',
+        url: '/start'
+      },
+
+      {
+        title: 'Inbox',
+        url: '/start/Inbox',
+        iosIcon: mailOutline,
+        mdIcon: mailSharp
+      },
+      {
+        title: 'Outbox',
+        url: '/start/Outbox',
+        iosIcon: paperPlaneOutline,
+        mdIcon: paperPlaneSharp
+      },
+      {
+        title: 'Favorites',
+        url: '/start/Favorites',
+        iosIcon: heartOutline,
+        mdIcon: heartSharp
+      },
+      {
+        title: 'Archived',
+        url: '/start/Archived',
+        iosIcon: archiveOutline,
+        mdIcon: archiveSharp
+      },
+      {
+        title: 'Trash',
+        url: '/start/Trash',
+        iosIcon: trashOutline,
+        mdIcon: trashSharp
+      },
+      {
+        title: 'Spam',
+        url: '/start/Spam',
+        iosIcon: warningOutline,
+        mdIcon: warningSharp
+      },
     ];
     const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
     

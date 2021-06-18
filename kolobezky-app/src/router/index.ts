@@ -7,8 +7,16 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/folder/Inbox'
   },
   {
+    path: '/start',
+    component: () => import ('../views/Start.vue')
+  },
+  {
     path: '/folder/:id',
     component: () => import ('../views/Folder.vue')
+  },
+  {
+    path: '/start/:id',
+    component: () => import ('../views/Start.vue')
   }
 ]
 
