@@ -18,9 +18,9 @@
     
       <div id="container">
         
-        <!--<ion-img :src=""></ion-img>
+        <ion-image></ion-image>
 
-        
+        <!--
         <strong class="capitalize">Tutorial</strong>
         <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
         -->

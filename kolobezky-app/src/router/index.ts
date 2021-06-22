@@ -16,27 +16,27 @@ const routes: Array<RouteRecordRaw> = [
   },
 
   {
-    path: '/tutorial/:id',
+    path: '/tutorial/',
     component: () => import ('../views/Tutorial.vue')
   },
   {
-    path: '/start/:id',
+    path: '/start/',
     component: () => import ('../views/Start.vue')
   },
   {
-    path: '/register/:id',
+    path: '/register',
     component: () => import ('../views/Register.vue')
   },
   {
-    path: '/login/:id',
+    path: '/login',
     component: () => import ('../views/Login.vue')
   },
   {
-    path: '/terms/:id',
+    path: '/terms',
     component: () => import ('../views/Terms.vue')
   },
   {
-    path: '/forgot-password/:id',
+    path: '/forgot-password',
     component: () => import ('../views/ForgotPassword.vue')
   }
 ]

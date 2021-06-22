@@ -57,44 +57,40 @@ export default defineComponent({
     const appPages = [
       {
         title: 'Tutorial',
-        url: '/tutorial/Inbox',
+        url: '/tutorial',
         iosIcon: mailOutline,
         mdIcon: mailSharp
       },
       {
         title: 'Start',
-        url: '/start/Outbox',
+        url: '/start',
         iosIcon: paperPlaneOutline,
         mdIcon: paperPlaneSharp
       },
       {
         title: 'Register',
-        url: '/register/Favorites',
+        url: '/register',
         iosIcon: heartOutline,
         mdIcon: heartSharp
       },
       {
         title: 'Login',
-        url: '/login/Archived',
+        url: '/login',
         iosIcon: archiveOutline,
         mdIcon: archiveSharp
       },
       {
         title: 'Terms',
-        url: '/terms/Trash',
+        url: '/terms',
         iosIcon: trashOutline,
         mdIcon: trashSharp
       },
       {
         title: 'Forgot Password',
-        url: '/forgot-password/Spam',
+        url: '/forgot-password',
         iosIcon: warningOutline,
         mdIcon: warningSharp
       },
-      {
-        title: 'Start',
-        url: '/start'
-      }
     ];
     const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
     
