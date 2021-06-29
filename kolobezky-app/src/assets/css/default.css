@@ -1,0 +1,15 @@
+ion-footer ion-toolbar {
+    padding: 10px 0 10px 0 !important;
+}
+
+div .-void{
+    height: 10px;
+    width: 10px;
+}
+
+.center-all{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}

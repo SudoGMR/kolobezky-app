@@ -17,22 +17,49 @@
       </ion-header>
     
       <div id="container">
-        <strong class="capitalize">Register</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <div><h3>Register</h3></div>
+        <div><p>Už máš účet?</p></div>
+        <ion-buttons class="-dir-col"><ion-button class="-btn-sm -btn-tertiary" router-link="/login">Prihlás sa</ion-button></ion-buttons>
+        <div class="-void"></div>
+        <div>
+          <ion-list>
+            <ion-item lines="none"><h3>Osobné údaje</h3></ion-item>
+            <ion-item><ion-input placeholder="Meno" type="text"></ion-input></ion-item>
+            <ion-item><ion-input placeholder="Telefón" type="tel"></ion-input></ion-item>
+            <ion-item><ion-input placeholder="Heslo" type="password"></ion-input></ion-item>
+            <ion-item lines="none">
+              <ion-checkbox></ion-checkbox>
+              <h6>Terms and Conditions</h6>            
+            </ion-item>
+          </ion-list>
+        </div>
       </div>
     </ion-content>
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons class="-dir-col">
+          <ion-button class="-btn -btn-primary" router-link="/start">Register</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButton, IonButtons, IonCheckbox, IonContent, IonFooter, IonHeader, IonInput, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 
 export default {
-  name: 'Folder',
+  name: 'Register',
   components: {
+    IonButton,
     IonButtons,
+    IonCheckbox,
     IonContent,
+    IonFooter,
     IonHeader,
+    IonInput,
+    IonItem,
+    IonList,
     IonMenuButton,
     IonPage,
     IonTitle,
@@ -42,6 +69,10 @@ export default {
 </script>
 
 <style scoped>
+ion-checkbox{
+  margin: 15px 10px 10px 0;
+}
+/* --- */
 #container {
   text-align: center;
   position: absolute;

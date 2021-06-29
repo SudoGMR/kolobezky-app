@@ -17,29 +17,51 @@
       </ion-header>
     
       <div id="container">
-        
-        <!--<ion-img :src=""></ion-img>
 
-        
-        <strong class="capitalize">Tutorial</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-        -->
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2" class="empty">
+              <ion-button>&lt;</ion-button>
+            </ion-col>
+            <ion-col>
+              <img src="../assets/img/scooter.png">
+              <p>Lorem ipsum</p>
+            </ion-col>
+            <ion-col size="2" class="empty">
+              <ion-button>&gt;</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
       </div>
     </ion-content>
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons class="-dir-col">
+          <ion-button class="-btn -btn-primary" router-link="/login">Start</ion-button>
+          <ion-button class="-btn -btn-secondary" router-link="register">Skip tutorial</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonButton, IonButtons, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonMenuButton, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/vue';
 
 export default {
-  name: 'Folder',
+  name: 'Tutorial',
   components: {
+    IonButton,
     IonButtons,
+    IonCol,
     IonContent,
+    IonFooter,
+    IonGrid,
     IonHeader,
     IonMenuButton,
     IonPage,
+    IonRow,
     IonTitle,
     IonToolbar
   }
@@ -47,6 +69,17 @@ export default {
 </script>
 
 <style scoped>
+ion-button{
+  align-self: center;
+}
+img{
+  width: 50%;
+}
+/* ------------------- */
+.empty{
+  display: flex;
+}
+/* ------------------- */
 #container {
   text-align: center;
   position: absolute;

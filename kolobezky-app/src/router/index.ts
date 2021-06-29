@@ -4,11 +4,7 @@ import { RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
-    redirect: '/folder/Inbox'
-  },
-  {
-    path: '/start',
-    component: () => import ('../views/Start.vue')
+    redirect: '/start'
   },
   {
     path: '/folder/:id',
@@ -16,11 +12,15 @@ const routes: Array<RouteRecordRaw> = [
   },
 
   {
-    path: '/tutorial/',
+    path: '/start',
+    component: () => import ('../views/Start.vue')
+  },
+  {
+    path: '/tutorial',
     component: () => import ('../views/Tutorial.vue')
   },
   {
-    path: '/start/',
+    path: '/start',
     component: () => import ('../views/Start.vue')
   },
   {
@@ -36,7 +36,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import ('../views/Terms.vue')
   },
   {
-    path: '/forgot-password',
+    path: '/forgot_password',
     component: () => import ('../views/ForgotPassword.vue')
   }
 ]

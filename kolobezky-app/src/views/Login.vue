@@ -17,10 +17,29 @@
       </ion-header>
     
       <div id="container">
-        <strong class="capitalize">Login</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <div><h3>LOGIN</h3></div>
+        <div>
+          <p>Ešte nemáš účet?</p>
+          <ion-buttons class="-dir-col"><ion-button class="-btn-sm -btn-tertiary" router-link="/register">Registruj sa</ion-button></ion-buttons>
+        </div>
+        <div class="-void"></div>
+        <ion-list>
+          <ion-item><ion-input placeholder="Meno" type="text"></ion-input></ion-item>
+          <ion-item><ion-input placeholder="Heslo" type="password"></ion-input></ion-item>
+        </ion-list>
+        <ion-buttons class="-dir-col -center-all">
+          <ion-button class="-btn -btn-secondary" router-link="/forgot_password">Zabudol som heslo</ion-button>
+        </ion-buttons>
       </div>
     </ion-content>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons class="-dir-col">
+          <ion-button class="-btn -btn-primary" router-link="/tutorial">Prihlásiť sa</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
   </ion-page>
 </template>
 
@@ -28,7 +47,7 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 
 export default {
-  name: 'Folder',
+  name: 'Login',
   components: {
     IonButtons,
     IonContent,
